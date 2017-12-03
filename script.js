@@ -7,6 +7,5 @@ var userGuess = document.querySelector(.'user-guess');
 guessButton.addEventListener('click', guess);
 
 function guess() {
-  preventDefault();
-  
+  eventPreventDefault(); 
 }
