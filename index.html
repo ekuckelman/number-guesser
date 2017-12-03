@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>Number Guesser</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans: 300, 700" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
   <header>
-    <h1>Number<span>Guesser</span></h1>
+    <h1>Number<span> Guesser</span></h1>
   </header>
   <section>
-    <form action="">
-      <input type="text" placeholder="Your Guess Here">
+    <form action="guess submission">
+      <input class="guess-input" type="text" placeholder="Your Guess Here">
       <button class="guess-button">Guess</button>
       <button class="clear-button">Clear</button>
     </form>
     <p>Your last guess was</p>
-    <article>
+    <article class="user-guess">
       <!-- code from javascript -->
     </article>
-    <button class="reset-button">Reset</button>
+    <button class="reset-button" type="reset">Reset</button>
   </section>
 </body>
 <link rel="scripts" href="scripts.js">
