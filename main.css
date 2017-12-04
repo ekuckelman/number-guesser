@@ -8,6 +8,7 @@ header {
   height: 100px;
   font-size: 1.5em;
   text-align: center;
+
 }
 
 header h1 {
@@ -17,6 +18,7 @@ header h1 {
 
 header span {
   color: #E6E7E8;
+  font-weight: lighter;
 }
 
 section {
@@ -25,12 +27,14 @@ section {
 
 section p {
   font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 .guess-input {
   font-size: 1.2em; 
+  display: block;
   width: 380px;
-  margin: 20px 0px;
+  margin: 20px auto;
 }
 
 .guess-button {
@@ -38,6 +42,8 @@ section p {
   border-radius: 15px;
   color: #FFFFFF;
   font-size: 1.2em;
+  margin-bottom: 30px;
+  margin-right: 10px;
   width: 180px;
 }
 
@@ -46,16 +52,22 @@ section p {
   border-radius: 15px;
   color: #FFFFFF;
   font-size: 1.2em;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  /*margin: 0px 20px 20px 20px;*/
   width: 180px;
 }
 
 .user-guess {
-  border: solid;
   display: block;
   height: 300px;
-  margin-left: 293px;
+  margin: auto;
   width: 380px;
+}
 
+.last-guess {
+  color:#ED458B;
+  font-size: 8em;
 }
 
 .reset-button {
@@ -64,5 +76,13 @@ section p {
   color: #FFFFFF;
   font-size: 1.2em;
   width: 380px;
+  margin: 20px auto;
 }
+
+button:hover {
+  background-color: #ED458B;
+  cursor: pointer;
+}
+
+
 
