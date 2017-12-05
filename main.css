@@ -31,11 +31,11 @@ section p {
 }
 
 .guess-input {
-  font-size: 1.2em; 
   display: block;
-  width: 380px;
+  font-size: 1.2em; 
   margin: 20px auto;
   outline: none;
+  width: 380px;
 }
 
 .guess-button {
@@ -45,8 +45,8 @@ section p {
   font-size: 1.2em;
   margin-bottom: 30px;
   margin-right: 10px;
-  width: 180px;
   outline: none;
+  width: 180px;
 }
 
 .clear-button {
@@ -56,9 +56,8 @@ section p {
   font-size: 1.2em;
   margin-bottom: 30px;
   margin-left: 10px;
-  /*margin: 0px 20px 20px 20px;*/
-  width: 180px;
   outline: none;
+  width: 180px;
 }
 
 .user-guess {
@@ -78,9 +77,9 @@ section p {
   border-radius: 15px;
   color: #FFFFFF;
   font-size: 1.2em;
-  width: 380px;
   margin: 20px auto;
   outline: none;
+  width: 380px;
 }
 
 button:hover {
