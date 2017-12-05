@@ -35,6 +35,7 @@ section p {
   display: block;
   width: 380px;
   margin: 20px auto;
+  outline: none;
 }
 
 .guess-button {
@@ -45,6 +46,7 @@ section p {
   margin-bottom: 30px;
   margin-right: 10px;
   width: 180px;
+  outline: none;
 }
 
 .clear-button {
@@ -56,6 +58,7 @@ section p {
   margin-left: 10px;
   /*margin: 0px 20px 20px 20px;*/
   width: 180px;
+  outline: none;
 }
 
 .user-guess {
@@ -77,6 +80,7 @@ section p {
   font-size: 1.2em;
   width: 380px;
   margin: 20px auto;
+  outline: none;
 }
 
 button:hover {
@@ -84,5 +88,11 @@ button:hover {
   cursor: pointer;
 }
 
+.clear-button:disabled {
+  background-color: #D0D2D3;
+}
 
+.reset-button:disabled {
+  background-color: #D0D2D3;
+}
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Number Guesser</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,300" rel="stylesheet">
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -12,16 +12,17 @@
   </header>
   <section>
     <form action="guess submission">
-      <input class="guess-input" type="text" placeholder="Your Guess Here">
+      <input class="guess-input" type="number" placeholder="Your Guess Here (Numbers only!)">
       <button class="guess-button">Guess</button>
-      <button class="clear-button">Clear</button>
+      <button class="clear-button" disabled="true">Clear</button>
     </form>
-    <article class="user-guess">
       <p>Your last guess was</p>
-      <p class="last-guess">35</p>
+    <article class="user-guess">
+      <p class="last-guess"></p>
+      <p class="feedback"></p>
     </article>
-    <button class="reset-button" type="reset">Reset</button>
+    <button class="reset-button" type="reset" disabled="true">Reset</button>
   </section>
 </body>
-<link rel="scripts" href="scripts.js">
+<script src="script.js"></script>
 </html>
