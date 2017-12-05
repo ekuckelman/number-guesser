@@ -9,6 +9,8 @@ var clearButton = document.querySelector('.clear-button');
 submitButton.addEventListener('click', displayRecentGuess);
 submitButton.addEventListener('click', answerFeedback);
 guessInput.addEventListener('keyup', enableClearButton);
+clearButton.addEventListener('click', clearInput);
+
 
 function displayRecentGuess(event) {
   event.preventDefault();
@@ -43,9 +45,12 @@ function enableClearButton() {
   }   
 }
 
-// function clearInput() {
-//   // clearButton to clear the guess input
-// }
+function clearInput(event) {
+  event.preventDefault();
+  guessInput.value = ('');
+  console.log('clear input function runs');
+}
+
 
 // function resetGame() {
 //   // reset button to reset the entire page
