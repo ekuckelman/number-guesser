@@ -18,6 +18,7 @@ resetButton.addEventListener('click', resetPage);
 function displayRecentGuess(event) {
   event.preventDefault();
   lastGuess.innerHTML = guessInput.value;
+  console.log('guessing');
 }
 
 function answerFeedback() {
@@ -39,7 +40,6 @@ function answerFeedback() {
   }
 }
 
-
 function enableClearButton() {
   if (guessInput.value.length === 0) {
     clearButton.disabled = true;
@@ -53,7 +53,6 @@ function clearInput(event) {
   guessInput.value = ('');
 }
 
-
 function enableResetButton() {
   if (guessInput.value.length === 0) {
     resetButton.disabled = true;
@@ -65,7 +64,9 @@ function enableResetButton() {
 function resetPage (event) {
   event.preventDefault();
   guessInput.value = ('');
-  userGuess.innerHTML = ('');
+  lastGuess.innerText = ('');
+  feedback.innerText =('');
 }
 
-
+// user max input and min input should replace the set 
+// 
