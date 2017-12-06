@@ -8,13 +8,17 @@ var userGuess = document.querySelector('.user-guess');
 var randomNumber = Math.floor(Math.random()* 100);
 var userMinimum = document.querySelector('.user-min');
 var userMaximum = document.querySelector('.user-max');
+var newAdventureButton = document.querySelector('.new-adventure-button');
+var minNumber = 0;
+var maxNumber = 100;
 
+guessInput.addEventListener('keyup', enableButtons);
 submitButton.addEventListener('click', displayRecentGuess);
 submitButton.addEventListener('click', answerFeedback);
-guessInput.addEventListener('keyup', enableClearButton);
 clearButton.addEventListener('click', clearInput);
-guessInput.addEventListener('keyup', enableResetButton);
 resetButton.addEventListener('click', resetPage);
+newAdventureButton.addEventListener('click', createNewAdventure);
+userMinimum.addEventListener('keyup', enableNewAdventure);
 
 function displayRecentGuess(event) {
   event.preventDefault();
@@ -23,8 +27,6 @@ function displayRecentGuess(event) {
 
 function answerFeedback() {
   console.log(randomNumber);
-  var minNumber = 0;
-  var maxNumber = 100;
   if (parseInt(guessInput.value) < minNumber) {
     feedback.innerHTML = 'Your guess is below the minimum number of 0'
   } else if (parseInt(guessInput.value) < randomNumber) {
@@ -40,25 +42,23 @@ function answerFeedback() {
   }
 }
 
-function enableClearButton() {
+function enableButtons() {
   if (guessInput.value.length === 0) {
     clearButton.disabled = true;
+    submitButton.disabled = true;
+    resetButton.disabled = true;
   } else {
     clearButton.disabled = false;
+    submitButton.disabled = false;
+    resetButton.disabled = false;
   }  
 }
 
 function clearInput(event) {
   event.preventDefault();
   guessInput.value = ('');
-}
-
-function enableResetButton() {
-  if (guessInput.value.length === 0) {
-    resetButton.disabled = true;
-  } else {
-    resetButton.disabled = false;
-  }   
+  userMinimum.value = ('');
+  userMaximum.value = ('');
 }
 
 function resetPage (event) {
@@ -70,5 +70,18 @@ function resetPage (event) {
   userMaximum.value = ('');
 }
 
-// user max input and min input should replace the set 
-// 
+function enableNewAdventure() {
+if (userMinimum.value.length === 0) {
+  newAdventureButton.disabled = true;
+} else {
+  newAdventureButton.disabled = false;
+  }
+
+}
+function createNewAdventure() {
+  min = parseInt(userMinimum.value);
+  max =  parseInt(userMaximum.value);
+  randomNumber = Math.floor(Math.random() * (max - min)) + min;
+  lastGuess.innerHTML = guessInput.value;
+  console.log(randomNumber);
+}
