@@ -1,12 +1,13 @@
 var guessInput = document.querySelector('.guess-input');
 var submitButton = document.querySelector('.guess-button');
 var lastGuess = document.querySelector('.last-guess');
-var randomNumber = Math.floor(Math.random()* 100);
 var feedback = document.querySelector('.feedback');
 var clearButton = document.querySelector('.clear-button');
 var resetButton = document.querySelector('.reset-button');
 var userGuess = document.querySelector('.user-guess');
-
+var randomNumber = Math.floor(Math.random()* 100);
+var userMinimum = document.querySelector('.user-min');
+var userMaximum = document.querySelector('.user-max');
 
 submitButton.addEventListener('click', displayRecentGuess);
 submitButton.addEventListener('click', answerFeedback);
@@ -17,8 +18,7 @@ resetButton.addEventListener('click', resetPage);
 
 function displayRecentGuess(event) {
   event.preventDefault();
-  lastGuess.innerHTML = guessInput.value;
-  console.log('guessing');
+  lastGuess.innerHTML = guessInput.value; 
 }
 
 function answerFeedback() {
@@ -45,7 +45,7 @@ function enableClearButton() {
     clearButton.disabled = true;
   } else {
     clearButton.disabled = false;
-  }   
+  }  
 }
 
 function clearInput(event) {
@@ -66,6 +66,8 @@ function resetPage (event) {
   guessInput.value = ('');
   lastGuess.innerText = ('');
   feedback.innerText =('');
+  userMinimum.value = ('');
+  userMaximum.value = ('');
 }
 
 // user max input and min input should replace the set 
