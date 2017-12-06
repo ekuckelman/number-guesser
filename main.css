@@ -97,7 +97,7 @@ button:hover {
 
 footer {
   background-color:#404041;
-  height:110px;
+  height:150px;
   text-align: center;
 }
 
@@ -109,7 +109,7 @@ footer h1 {
 
 .user-min {
   font-size: 1.1em;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-right: 10px;
   outline: none;
   width: 170px;
@@ -117,8 +117,19 @@ footer h1 {
 
 .user-max {
   font-size: 1.1em;
-  margin-bottom: 30px;
+  margin-bottom: 5px;
   margin-left: 10px;
   outline: none;
   width: 170px;
+}
+
+.new-adventure-button {
+  background-color: #929497;
+  border-radius: 15px;
+  color: #FFFFFF;
+  display: block;
+  font-size: 1.2em;
+  margin: 15px auto;
+  outline: none;
+  width: 380px;
 }
