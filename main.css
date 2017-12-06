@@ -87,6 +87,10 @@ button:hover {
   cursor: pointer;
 }
 
+.guess-button:disabled {
+  background-color: #D0D2D3;
+}
+
 .clear-button:disabled {
   background-color: #D0D2D3;
 }
@@ -132,4 +136,9 @@ footer h1 {
   margin: 15px auto;
   outline: none;
   width: 380px;
+  border: none;
+}
+
+.new-adventure-button:disabled {
+  background-color: #D0D2D3;
 }
