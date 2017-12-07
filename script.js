@@ -59,6 +59,7 @@ function clearInput(event) {
   guessInput.value = ('');
   userMinimum.value = ('');
   userMaximum.value = ('');
+  enableButtons();
 }
 
 function resetPage (event) {
@@ -68,7 +69,7 @@ function resetPage (event) {
   feedback.innerText =('');
   userMinimum.value = ('');
   userMaximum.value = ('');
-  // randomNumber();
+  enableButtons();
 }
 
 function enableNewAdventure() {
