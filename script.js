@@ -36,7 +36,7 @@ function answerFeedback() {
   } else if (parseInt(guessInput.value) > randomNumber) {
     feedback.innerHTML = 'That is too high';
   } else if (parseInt(guessInput.value) == randomNumber) {
-    feedback.innerHTML = 'Boom';
+    feedback.innerHTML = 'BOOM';
   } else {
     feedback.innerHTML = 'That\'s not a number'
   }
@@ -59,6 +59,7 @@ function clearInput(event) {
   guessInput.value = ('');
   userMinimum.value = ('');
   userMaximum.value = ('');
+  enableButtons();
 }
 
 function resetPage (event) {
@@ -68,6 +69,7 @@ function resetPage (event) {
   feedback.innerText =('');
   userMinimum.value = ('');
   userMaximum.value = ('');
+  enableButtons();
 }
 
 function enableNewAdventure() {
@@ -85,3 +87,8 @@ function createNewAdventure() {
   lastGuess.innerHTML = guessInput.value;
   console.log(randomNumber);
 }
+
+// Reset the random number when the reset button is clicked.
+// make the number be random between 0 and 100 again  when the
+ // reset button is clicked because the new adventure is over.
+ // 
