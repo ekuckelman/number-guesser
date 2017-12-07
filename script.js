@@ -88,6 +88,8 @@ function createNewAdventure() {
   console.log(randomNumber);
 }
 
+
+
 // Reset the random number when the reset button is clicked.
 // make the number be random between 0 and 100 again  when the
  // reset button is clicked because the new adventure is over.
